@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo::before,
+.logo::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  display: block;
+  width: inherit;
+  height: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.logo::before {
+  @apply border-t-[10px] border-l-[10px] border-primary;
+  animation: top 1.3s linear infinite;
+  top: 0;
+}
+
+.logo::after {
+  @apply border-b-[10px] border-r-[10px] border-primary;
+  animation: bottom 1.3s linear infinite;
+  animation-delay: calc(2.6 * -0.25);
+  bottom: 0;
+}
+
+@keyframes top {
+  from {
+    animation-timing-function: ease-in;
+    clip-path: polygon(
+      0 0,
+      0 0,
+      0 70%,
+      77% 70%,
+      77% 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+  }
+  50% {
+    animation-timing-function: ease-out;
+    clip-path: polygon(
+      0 0,
+      0 0,
+      0 70%,
+      77% 70%,
+      77% 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+  }
+  to {
+    clip-path: polygon(0 0, 0 0, 0 70%, 0 70%, 0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes bottom {
+  from {
+    animation-timing-function: ease-in;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 30%,
+      0 30%,
+      0 100%,
+      0 100%
+    );
+  }
+  50% {
+    animation-timing-function: ease-out;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      77% 100%,
+      77% 30%,
+      0 30%,
+      0 100%,
+      0 100%
+    );
+  }
+  to {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      123% 100%,
+      123% 30%,
+      100% 30%,
+      100% 100%,
+      0 100%
+    );
+  }
+}

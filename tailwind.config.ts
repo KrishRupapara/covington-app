@@ -15,6 +15,16 @@ const config: Config = {
       },
       colors: {
         primary: "#212121",
+        mildWhite: "#F8F8F8",
+        dullWhite: "#FCFCFC",
+      },
+      backgroundColor: {
+        coverColor: "rgba(0,0,0,0.5)",
+        card: "rgba(0, 0, 0, 0.65)",
+        slide: "rgba(248, 248, 248, 0.30)",
+      },
+      letterSpacing: {
+        widen: "0.2em",
       },
     },
   },

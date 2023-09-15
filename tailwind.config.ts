@@ -22,6 +22,7 @@ const config: Config = {
         coverColor: "rgba(0,0,0,0.5)",
         card: "rgba(0, 0, 0, 0.65)",
         slide: "rgba(248, 248, 248, 0.30)",
+        projcard: "rgba(0, 0, 0, 0.30)",
       },
       letterSpacing: {
         widen: "0.2em",

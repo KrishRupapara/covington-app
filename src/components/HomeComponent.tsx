@@ -1,21 +1,15 @@
 import Image from "next/image";
-import InfoCard from "./InfoCard";
-import HomeCard from "./HomeCard";
+import InfoCard from "@/components/InfoCard";
+import HomeCard from "@/components/HomeCard";
+import BgImg from "@/components/ui/BgImg";
 
 export default function HomeComponent() {
   return (
-    <section className="w-screen h-screen pt-24">
+    <section className="w-screen" style={{ height: "calc(100vh - 6rem)" }}>
       <div className="grid grid-rows-[2fr_1fr] h-full">
-        <div className="bg-coverColor grid place-content-center">
+        <div className="bg-coverColor grid place-content-center relative">
           <HomeCard />
-          <Image
-            src="/img/bg-cover.webp"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            alt="Image cover"
-            className="-z-10"
-          />
+          <BgImg src={"/img/bg-cover.webp"} alt="Image cover" />
         </div>
         <div className="grid grid-cols-3">
           <InfoCard head="Modern Design" img={"/img/bg-2.webp"} />

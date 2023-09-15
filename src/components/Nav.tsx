@@ -2,7 +2,7 @@ import { FaApple, FaGoogle, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function Nav() {
   return (
-    <div className="w-screen text-primary fixed top-0 bg-mildWhite">
+    <div className="w-screen text-primary sticky top-0 bg-mildWhite z-30">
       <div className="bg-[#E8E8E8]">
         <div className="font-sans w-11/12 flex p-2 tracking-wider mx-auto items-center justify-between">
           <div className="flex gap-8 text-sm">

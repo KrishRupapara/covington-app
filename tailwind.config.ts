@@ -17,6 +17,7 @@ const config: Config = {
         primary: "#212121",
         mildWhite: "#F8F8F8",
         dullWhite: "#FCFCFC",
+        lightGray: "#898989",
       },
       backgroundColor: {
         coverColor: "rgba(0,0,0,0.5)",

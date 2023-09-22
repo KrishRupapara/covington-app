@@ -12,6 +12,9 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -38,6 +41,26 @@ html {
   animation: bottom 1.3s linear infinite;
   animation-delay: calc(2.6 * -0.25);
   bottom: 0;
+}
+
+.arrow::before {
+  content: "";
+  @apply absolute top-1/2 w-20 right-0 h-[2px] bg-mildWhite transition-all duration-300 delay-0;
+}
+
+.arrow::after {
+  content: "";
+  @apply absolute top-1/2 right-0 -mt-[5px] w-[12px] h-[12px] border-r-[3px]
+    border-b-[3px] -rotate-45 transition-all delay-0 duration-300;
+}
+
+.read-more:hover .arrow:before,
+.read-more:hover .arrow:after {
+  right: -2rem;
+}
+
+.read-more:hover .read-more__heading {
+  @apply translate-x-8 -skew-x-[20deg];
 }
 
 @keyframes top {

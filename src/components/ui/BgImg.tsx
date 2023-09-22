@@ -4,9 +4,17 @@ import { cn } from "@/lib/utils";
 
 interface BgImgProps extends ImageProps {
   bgClass?: string;
+  children?: React.ReactNode;
 }
 
-const BgImg: FC<BgImgProps> = ({ bgClass, src, className, alt, ...props }) => {
+const BgImg: FC<BgImgProps> = ({
+  bgClass,
+  src,
+  className,
+  alt,
+  children,
+  ...props
+}) => {
   return (
     <div className={bgClass}>
       <Image
@@ -16,6 +24,7 @@ const BgImg: FC<BgImgProps> = ({ bgClass, src, className, alt, ...props }) => {
         alt={alt}
         {...props}
       />
+      {children}
     </div>
   );
 };

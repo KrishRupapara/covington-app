@@ -22,6 +22,8 @@ const BgImg: FC<BgImgProps> = ({
         className={cn(className, " absolute -z-10")}
         fill
         alt={alt}
+        loading="lazy"
+        sizes="100vw"
         {...props}
       />
       {children}

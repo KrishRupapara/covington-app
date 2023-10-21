@@ -9,9 +9,10 @@ const leelawad = localFont({
 interface InfoCardProps {
   head: string;
   img: string;
+  sizes?: string;
 }
 
-const InfoCard: FC<InfoCardProps> = ({ head, img }) => {
+const InfoCard: FC<InfoCardProps> = ({ head, img, sizes }) => {
   return (
     <div
       className={
@@ -19,7 +20,7 @@ const InfoCard: FC<InfoCardProps> = ({ head, img }) => {
         " h-full grid place-content-center relative text-center bg-card px-16 border-r"
       }
     >
-      <BgImg src={img} alt={head} />
+      <BgImg src={img} alt={head} sizes={sizes} />
       <h1 className="text-lg mb-2 font-bold text-mildWhite">{head}</h1>
       <p className="block text-dullWhite">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel unde nam

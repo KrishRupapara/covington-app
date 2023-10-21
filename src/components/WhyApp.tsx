@@ -35,7 +35,9 @@ export default function WhyApp() {
       <BgImg
         src={"/img/why-cover.webp"}
         alt="Why choose Ableton"
+        className="aspect-[16/9] object-cover"
         bgClass="w-1/2 h-[inherit] relative bg-[#21212166]"
+        sizes="50vw"
       />
     </div>
   );

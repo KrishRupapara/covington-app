@@ -18,29 +18,18 @@ body {
   overflow-x: hidden;
 }
 
-.logo::before,
-.logo::after {
-  content: "";
-  position: absolute;
-  left: -10px;
-  display: block;
-  width: inherit;
-  height: 100%;
-  height: 100%;
-  border-radius: inherit;
+rect {
+  stroke-linecap: round;
+  stroke-dasharray: 0, 0, 40, 470;
+  stroke-dashoffset: 770;
+  stroke-linejoin: round;
+  animation: spin 3.5s infinite linear alternate;
 }
 
-.logo::before {
-  @apply border-t-[10px] border-l-[10px] border-primary;
-  animation: top 1.3s linear infinite;
-  top: 0;
-}
-
-.logo::after {
-  @apply border-b-[10px] border-r-[10px] border-primary;
-  animation: bottom 1.3s linear infinite;
-  animation-delay: calc(2.6 * -0.25);
-  bottom: 0;
+@keyframes spin {
+  100% {
+    stroke-dashoffset: -240;
+  }
 }
 
 .arrow::before {

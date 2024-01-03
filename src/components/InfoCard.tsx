@@ -1,10 +1,7 @@
 import { FC } from "react";
-import localFont from "next/font/local";
-import BgImg from "./ui/BgImg";
-
-const leelawad = localFont({
-  src: "../../public/fonts/leelawad.ttf",
-});
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { leelawad } from "@/utils/font";
 
 interface InfoCardProps {
   head: string;
@@ -15,14 +12,20 @@ interface InfoCardProps {
 const InfoCard: FC<InfoCardProps> = ({ head, img, sizes }) => {
   return (
     <div
-      className={
-        leelawad.className +
-        " h-full grid place-content-center relative text-center bg-card px-16 border-r"
-      }
+      className={cn(
+        leelawad.className,
+        "h-inherit grid place-content-center relative text-center px-16 py-4 border-r bg-darkGray"
+      )}
     >
-      <BgImg src={img} alt={head} sizes={sizes} />
+      <Image
+        src={img}
+        alt={head}
+        sizes={sizes}
+        className="absolute -z-10 object-cover aspect-video"
+        fill
+      />
       <h1 className="text-lg mb-2 font-bold text-mildWhite">{head}</h1>
-      <p className="block text-dullWhite">
+      <p className="text-dullWhite">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel unde nam
         aut vero?
       </p>

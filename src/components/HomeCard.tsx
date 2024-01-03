@@ -1,12 +1,8 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import localFont from "next/font/local";
+import { leelawad } from "@/utils/font";
 import { useEffect, useState } from "react";
-
-const leelawad = localFont({
-  src: "../../public/fonts/leelawad.ttf",
-});
 
 const HomeCard = () => {
   const [curr, setCurr] = useState(0);
@@ -30,9 +26,6 @@ const HomeCard = () => {
     },
     in: {
       opacity: 1,
-      tranistion: {
-        duration: 0.1,
-      },
     },
   };
 
@@ -42,6 +35,7 @@ const HomeCard = () => {
         className="flex flex-col items-center"
         animate={anim}
         variants={variants}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
       >
         <div className="w-14 h-8 rounded-[3rem] border-mildWhite border-[7px]"></div>
         <h1 className={leelawad.className + " tracking-widen pt-3 pl-2"}>

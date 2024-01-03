@@ -19,7 +19,7 @@ const BgImg: FC<BgImgProps> = ({
     <div className={bgClass}>
       <Image
         src={src}
-        className={cn(className, " absolute -z-10")}
+        className={cn(className, "absolute -z-10")}
         fill
         alt={alt}
         loading="lazy"
